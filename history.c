@@ -74,7 +74,7 @@ int read_history(info_t *info)
 		return (0);
 	if (!fstat(fd, &st))
 		fsize = st.st_size;
-	f(fsize < 2)
+	if(fsize < 2)
 		return (0);
 	buf = malloc(sizeof(char) * (fsize + 1));
 	if (!buf)
